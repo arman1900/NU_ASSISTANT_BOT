@@ -130,6 +130,28 @@ class BasicBot {
                     case DialogTurnStatus.empty:
                         // Determine what we should do based on the top intent from LUIS.
                         switch (topIntent) {
+                            case GREETING_INTENT:
+                            console.log(results.text)
+                            const greetingResults = await this.qnaMaker.generateAnswer(results.text);
+                            console.log("Yes")
+                            if (greetingResults[0]) {
+                                await context.sendActivity(greetingResults[0].answer);
+                            }
+                            else {
+                                await context.sendActivity('No QnA Maker answers were found. This example uses a QnA Maker Knowledge Base that focuses on smart light bulbs. To see QnA Maker in action, ask the bot questions like "Why won\'t it turn on?" or "I need help."');
+                            }   
+                            break;
+                            case STUDY_INTENT:
+                            console.log(results.text)
+                            const studyResults = await this.qnaMaker.generateAnswer(results.text);
+                            console.log("Yes")
+                            if (studyResults[0]) {
+                                await context.sendActivity(studyResults[0].answer);
+                            }
+                            else {
+                                await context.sendActivity('No QnA Maker answers were found. This example uses a QnA Maker Knowledge Base that focuses on smart light bulbs. To see QnA Maker in action, ask the bot questions like "Why won\'t it turn on?" or "I need help."');
+                            }   
+                            break;
                             case QNA_INTENT:
                             console.log(results.text)
                             const qnaResults = await this.qnaMaker.generateAnswer(results.text);
