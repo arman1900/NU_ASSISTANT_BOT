@@ -1,0 +1,81 @@
+{
+    "name": "NUAssistant_0",
+    "description": "",
+    "services": [
+        {
+            "type": "abs",
+            "tenantId": "fa076846-be14-4107-97d4-7600abebf79b",
+            "subscriptionId": "ba8a7d3c-555d-4230-bbfe-917ea015556b",
+            "resourceGroup": "NUAssistant_0",
+            "serviceName": "NUAssistant_0",
+            "name": "NUAssistant_0",
+            "id": "1",
+            "appId": "e443df45-10cd-4259-886c-9661632a9906"
+        },
+        {
+            "type": "blob",
+            "connectionString": "DefaultEndpointsProtocol=https;AccountName=nuassistant093c0;AccountKey=McNzsHlkDTpXy3nMHon7SH7W9slyqKvdiVjWufzmQnqcspUADpOF0kUhr09s1QFvDOmzuVdXopERZfYzAs+8IQ==;",
+            "tenantId": "fa076846-be14-4107-97d4-7600abebf79b",
+            "subscriptionId": "ba8a7d3c-555d-4230-bbfe-917ea015556b",
+            "resourceGroup": "NUAssistant_0",
+            "serviceName": "nuassistant093c0",
+            "id": "2"
+        },
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "name": "development",
+            "id": "3"
+        },
+        {
+            "type": "endpoint",
+            "appId": "e443df45-10cd-4259-886c-9661632a9906",
+            "appPassword": "hpqwD5739#:yvnGPLPKX7{:",
+            "endpoint": "https://nuassistant0.azurewebsites.net/api/messages",
+            "name": "production",
+            "id": "4"
+        },
+        {
+            "type": "appInsights",
+            "instrumentationKey": "8595315f-0eb2-431e-86a1-f12d76f18305",
+            "applicationId": "a468ca70-e3fc-4662-a9c9-36de516549f8",
+            "apiKeys": {},
+            "tenantId": "fa076846-be14-4107-97d4-7600abebf79b",
+            "subscriptionId": "ba8a7d3c-555d-4230-bbfe-917ea015556b",
+            "resourceGroup": "NUAssistant_0",
+            "serviceName": "NUAssistant_023lmfl",
+            "id": "5"
+        },
+        {
+            "type": "luis",
+            "appId": "cec38ec6-73c0-4f20-80de-803891cbc461",
+            "authoringKey": "0bf76d830b144ac5ae8e0ea094174e59",
+            "version": "0.1",
+            "region": "westus",
+            "name": "BasicBotLuisApplication",
+            "id": "7"
+        },
+        {
+            "type": "qna",
+            "name": "nu-qna",
+            "kbId": "0fb085c8-8b49-4f3a-bb38-02baf38d6d61",
+            "subscriptionKey": "61d834a6338247bcb88cec35483d1a61",
+            "endpointKey": "17f6f29f-6a57-43a1-9489-479613a3a201",
+            "hostname": "https://nuqna.azurewebsites.net/qnamaker",
+            "id": "194"
+        },
+        {
+            "type": "qna",
+            "name": "qna-nu",
+            "kbId": "b2d6bf74-91d7-481d-ab46-9d33a1aef507",
+            "subscriptionKey": "61d834a6338247bcb88cec35483d1a61",
+            "endpointKey": "17f6f29f-6a57-43a1-9489-479613a3a201",
+            "hostname": "https://nuqna.azurewebsites.net/qnamaker",
+            "id": "6"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0"
+}
