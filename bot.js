@@ -164,11 +164,16 @@ class BasicBot {
                             }   
                             break;
                             case NONE_INTENT:
-                            default:
-                                // None or no intent identified, either way, let's provide some help
-                                // to the user
-                                await dc.context.sendActivity(`I didn't understand what you just said to me.`);
-                                break;
+                            console.log(results.text)
+                            const noneResults = await this.qnaMaker.generateAnswer(results.text);
+                            console.log("Yes")
+                            if (noneResults[0]) {
+                                await context.sendActivity(noneResults[0].answer);
+                            }
+                            else {
+                                await context.sendActivity('No QnA Maker answers were found. This example uses a QnA Maker Knowledge Base that focuses on smart light bulbs. To see QnA Maker in action, ask the bot questions like "Why won\'t it turn on?" or "I need help."');
+                            }   
+                            break;
                             }
                         break;
                     case DialogTurnStatus.waiting:
